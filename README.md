@@ -18,6 +18,14 @@ npm run build    # site statique dans dist/ (GitHub Pages, Netlify, Vercel…)
 | `src/data/suppliers.ts` | Fournisseurs, modèle (affiliation / sur demande), retours, SAV, liens |
 | `src/index.css` | Couleurs (variables `--blue`, `--green`…) et mise en page |
 
+## Catalogue réel
+
+`src/data/catalog.ts` contient 27 vrais produits (photos marchand + prix TTC relevés sur Amazon.com.be
+le 6 octobre 2026, comparés à Coolblue qui était plus cher sur tous les articles testés).
+Mettez à jour `PRICE_DATE` et les prix à chaque relevé. Pages légales : `src/pages/Legal.tsx`
+(CGV, formulaire de rétractation, confidentialité — à faire relire et compléter via `config.ts`).
+Kit de contact fournisseurs (non publié) : `interne/CONTACTS-FOURNISSEURS.md`.
+
 ## Deux modèles de vente par produit
 
 - **Affiliation** (Coolblue, Amazon.com.be, Back Market) : bouton « Voir l'offre chez… ».
