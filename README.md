@@ -14,9 +14,9 @@ npm run build    # site statique dans dist/ (GitHub Pages, Netlify, Vercel…)
 | Fichier | Contenu |
 |---|---|
 | `src/config.ts` | Nom, e-mail de réception des formulaires, téléphone, WhatsApp, n° BCE |
-| `src/data/catalog.ts` | Rayons et produits (nom, prix TTC indicatif, caractéristiques, fournisseur, délai) |
+| `src/data/catalog.ts` | Rayons et produits (nom, photo, prix TTC relevé, note, caractéristiques, ASIN Amazon) |
 | `src/data/suppliers.ts` | Fournisseurs, modèle (affiliation / sur demande), retours, SAV, liens |
-| `src/index.css` | Couleurs (variables `--blue`, `--green`…) et mise en page |
+| `src/index.css` | Couleurs (variables `--indigo`, `--rose`, `--cyan`…, tirées des photos produits) et mise en page |
 
 ## Catalogue réel
 
@@ -30,7 +30,7 @@ Kit de contact fournisseurs (non publié) : `interne/CONTACTS-FOURNISSEURS.md`.
 
 - **Affiliation** (Coolblue, Amazon.com.be, Back Market) : bouton « Voir l'offre chez… ».
   Le marchand est le vendeur et gère paiement, retours et garantie. Vous touchez une commission.
-  → Après inscription au programme, remplacez `searchUrl` par vos liens affiliés.
+  → Après inscription Amazon Partenaires, mettez votre identifiant dans `amazonTag` (config.ts).
 - **Sur demande** (fournisseur dropshipping UE) : le client envoie une demande via le formulaire,
   vous la transmettez au fournisseur qui expédie. ⚠️ Dans ce cas **vous êtes le vendeur légal**.
 
