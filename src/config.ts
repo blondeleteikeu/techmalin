@@ -12,7 +12,7 @@ export const SITE = {
   address: '[Rue et numéro], [code postal] Liège, Belgique',
   bce: '[BE 0XXX.XXX.XXX]',
   // Identifiant Amazon Partenaires (ex. « techmalin-21 ») : ajouté automatiquement à tous les liens Amazon.
-  amazonTag: '',
+  amazonTag: 'techmalin09-21',
 }
 
 export const FORM_ENDPOINT = `https://formsubmit.co/ajax/${SITE.email}`
