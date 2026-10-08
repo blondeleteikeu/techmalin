@@ -47,6 +47,13 @@ export const SUPPLIERS: Supplier[] = [
     compareUrl: q => `https://www.backmarket.be/fr-be/search?q=${enc(q)}`,
   },
   {
+    id: 'metacares', name: 'Meta Cares', kind: 'affiliation',
+    role: 'Boutique partenaire belge pour la santé et les soins à domicile : plus de 2 600 produits.',
+    delivery: 'Livraison suivie en Belgique, offerte dès 99 €.',
+    returns: 'Retours sous 30 jours, paiement Bancontact et cartes via Stripe.',
+    support: 'Contact Meta Cares', supportUrl: 'https://www.metacares.shop/contact',
+  },
+  {
     id: 'demande', name: `${SITE.name} – sur demande`, kind: 'demande',
     role: 'Un produit absent du catalogue ? Nous le cherchons au meilleur prix auprès de nos fournisseurs.',
     delivery: 'Délai communiqué avec le devis, livraison en Belgique.',

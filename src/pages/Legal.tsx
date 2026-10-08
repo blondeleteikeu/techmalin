@@ -25,7 +25,7 @@ export function CGV() {
       <h2>Article 2 – Objet et champ d’application</h2>
       <p>Le site {SITE.name} présente une sélection de matériel informatique au meilleur prix et met en relation ses visiteurs avec des marchands et fournisseurs partenaires. Il propose deux types d’offres, clairement indiqués sur chaque fiche :</p>
       <ul>
-        <li><strong>Offres « Achat chez le partenaire »</strong> : le bouton renvoie vers le site du marchand (par exemple Amazon.com.be, Coolblue ou Back Market). Le contrat de vente est conclu directement entre vous et ce marchand, selon ses propres conditions générales. {SITE.name} n’est pas le vendeur : il n’encaisse aucun paiement et n’intervient ni dans la livraison, ni dans les retours, ni dans la garantie, qui relèvent du marchand. {SITE.name} peut percevoir une commission d’affiliation, sans surcoût pour vous.</li>
+        <li><strong>Offres « Achat chez le partenaire »</strong> : le bouton renvoie vers le site du marchand (par exemple Amazon.com.be, Coolblue, Back Market ou la boutique santé Meta Cares). Le contrat de vente est conclu directement entre vous et ce marchand, selon ses propres conditions générales. {SITE.name} n’est pas le vendeur : il n’encaisse aucun paiement et n’intervient ni dans la livraison, ni dans les retours, ni dans la garantie, qui relèvent du marchand. {SITE.name} peut percevoir une commission d’affiliation, sans surcoût pour vous.</li>
         <li><strong>Commandes « Sur demande »</strong> : vous demandez à {SITE.name} de vous fournir un produit, que nous commandons auprès d’un fournisseur qui l’expédie directement chez vous. Pour ces commandes, {SITE.name} est le vendeur et les présentes conditions générales s’appliquent.</li>
       </ul>
       <p>Toute commande « Sur demande » implique l’acceptation des présentes conditions, que vous reconnaissez avoir lues avant de commander. Elles prévalent sur tout autre document, sauf accord écrit contraire.</p>
@@ -77,7 +77,7 @@ export function Retractation() {
     <article className="legal">
       <h1>Formulaire de rétractation</h1>
       <p className="legal-date">Annexe 2 au livre VI du Code de droit économique</p>
-      <p>Veuillez compléter et renvoyer le présent formulaire <strong>uniquement si vous souhaitez vous rétracter</strong> d’une commande « Sur demande » passée auprès de {SITE.name}. Pour un achat effectué chez un marchand partenaire (Amazon, Coolblue, Back Market…), adressez-vous directement à ce marchand.</p>
+      <p>Veuillez compléter et renvoyer le présent formulaire <strong>uniquement si vous souhaitez vous rétracter</strong> d’une commande « Sur demande » passée auprès de {SITE.name}. Pour un achat effectué chez un marchand partenaire (Amazon, Coolblue, Back Market, Meta Cares…), adressez-vous directement à ce marchand.</p>
       <div className="legal-form">
         <p>À l’attention de :<br /><strong>{SITE.legalName}</strong> ({SITE.name})<br />{SITE.address}<br />E-mail : {SITE.email}</p>
         <p>Je/Nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la vente du bien (*) / pour la prestation de services (*) ci-dessous :</p>
@@ -133,7 +133,7 @@ export function Confidentialite() {
       <p>Certains de ces prestataires peuvent être établis hors de l’Union européenne (notamment aux États-Unis). Dans ce cas, le transfert est encadré par une décision d’adéquation (EU-US Data Privacy Framework) ou par les clauses contractuelles types de la Commission européenne.</p>
 
       <h2>5. Liens vers les marchands partenaires et contenus externes</h2>
-      <p>Lorsque vous cliquez sur « Voir l’offre », vous quittez notre site pour celui du marchand (Amazon, Coolblue, Back Market…). Ce marchand traite alors vos données et dépose ses propres cookies, y compris d’affiliation, selon sa politique de confidentialité. Les photos des produits sont affichées depuis les serveurs des marchands : votre navigateur leur transmet donc votre adresse IP lors de l’affichage, comme pour toute image externe.</p>
+      <p>Lorsque vous cliquez sur « Voir l’offre », vous quittez notre site pour celui du marchand (Amazon, Coolblue, Back Market, Meta Cares…). Ce marchand traite alors vos données et dépose ses propres cookies, y compris d’affiliation, selon sa politique de confidentialité. Les photos des produits sont affichées depuis les serveurs des marchands : votre navigateur leur transmet donc votre adresse IP lors de l’affichage, comme pour toute image externe.</p>
 
       <h2>6. Durées de conservation</h2>
       <ul>

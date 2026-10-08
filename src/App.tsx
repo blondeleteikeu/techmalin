@@ -4,6 +4,7 @@ import { CATEGORIES, PRICE_DATE, PRODUCTS, type CategoryId, type Product } from 
 import { SUPPLIERS, supplierById } from './data/suppliers'
 import { FORM_ENDPOINT, SITE } from './config'
 import { CGV, Confidentialite, Retractation } from './pages/Legal'
+import Sante, { McCard, useMetaCares } from './pages/Sante'
 
 const euro = (n: number) => n.toLocaleString('fr-BE', { style: 'currency', currency: 'EUR' })
 const catOf = (id: CategoryId) => CATEGORIES.find(c => c.id === id)!
@@ -41,6 +42,7 @@ function useRoute() {
 export default function App() {
   const hash = useRoute()
   const [menu, setMenu] = useState(false)
+  const sante = hash === '#/sante'
   const page = hash === '#/cgv' ? <CGV /> : hash === '#/confidentialite' ? <Confidentialite /> : hash === '#/retractation' ? <Retractation /> : null
 
   return (
@@ -50,6 +52,7 @@ export default function App() {
           <a href="#top" className="logo"><span className="logo-mark"><Icon name="laptop" size={20} /></span>{SITE.name}</a>
           <nav className={menu ? 'nav open' : 'nav'} onClick={() => setMenu(false)}>
             <a href="#catalogue">Catalogue</a>
+            <a href="#/sante" className="nav-mc">Santé & soins</a>
             <a href="#fonctionnement">Comment ça marche</a>
             <a href="#fournisseurs">Partenaires</a>
             <a href="#retours">Retours & SAV</a>
@@ -60,7 +63,7 @@ export default function App() {
         </div>
       </header>
 
-      {page ? <main className="wrap legal-wrap"><a href="#top" className="back">← Retour au site</a>{page}</main> : <Home />}
+      {sante ? <Sante /> : page ? <main className="wrap legal-wrap"><a href="#top" className="back">← Retour au site</a>{page}</main> : <Home />}
 
       <footer className="footer">
         <div className="wrap foot-in">
@@ -110,6 +113,12 @@ function Home() {
   const pickCat = (c: CategoryId) => { setCat(c); document.getElementById('catalogue')?.scrollIntoView({ behavior: 'smooth' }) }
   const heroPics = ['thinkpad-t14-g1', 'acer-ek241yg', 'sandisk-flair-64', 'mercusys-mr1500x', 'logitech-m185'].map(id => PRODUCTS.find(p => p.id === id)!)
   const cheapest = Math.min(...PRODUCTS.map(p => p.price))
+  const mc = useMetaCares()
+  const mcPicks = useMemo(() => {
+    if (!mc) return []
+    const seen = new Set<string>()
+    return mc.products.filter(p => p.st && !seen.has(p.c) && seen.add(p.c)).slice(0, 8)
+  }, [mc])
 
   return (
     <main id="top">
@@ -148,6 +157,11 @@ function Home() {
               <em>{PRODUCTS.filter(p => p.category === c.id).length} produits · dès {euro(Math.min(...PRODUCTS.filter(p => p.category === c.id).map(p => p.price)))}</em>
             </button>
           ))}
+          <a href="#/sante" className="cat cat-mc" style={{ '--c': '#059669' } as React.CSSProperties}>
+            <span className="cat-ic"><Icon name="shield" size={26} /></span>
+            <strong>Santé & soins</strong><small>Matériel médical et aide à domicile, par Meta Cares.</small>
+            <em>{mc ? mc.products.length.toLocaleString('fr-BE') : '2 600+'} produits →</em>
+          </a>
         </div>
       </section>
 
@@ -191,6 +205,20 @@ function Home() {
         <div className="ask">
           <div><h3>Vous ne trouvez pas votre produit ?</h3><p>Cartouches, câble spécifique, PC sur mesure… Envoyez-nous votre demande, nous cherchons le meilleur prix pour vous.</p></div>
           <div className="actions"><button className="btn" onClick={() => goForm('demande')}>Faire une demande</button><a className="btn btn-wa" href={wa('Bonjour, je cherche le produit suivant : ')} target="_blank" rel="noopener"><Icon name="whatsapp" size={18} />WhatsApp</a></div>
+        </div>
+      </section>
+
+      <section className="mc-teaser">
+        <div className="wrap section">
+          <div className="cat-head">
+            <div>
+              <p className="eyebrow eyebrow-mc">Boutique partenaire · Meta Cares</p>
+              <h2 className="h2">Santé & soins à domicile</h2>
+              <p className="sub left">{mc ? mc.products.length.toLocaleString('fr-BE') : '2 600+'} produits : incontinence, hygiène, mobilité, soins, nutrition… livrés en Belgique, livraison offerte dès 99 €.</p>
+            </div>
+            <a href="#/sante" className="btn btn-mc">Voir tout le catalogue santé<Icon name="arrow" size={18} /></a>
+          </div>
+          <div className="grid">{mcPicks.map(p => <McCard key={p.s} p={p} />)}</div>
         </div>
       </section>
 
