@@ -6,11 +6,11 @@ export const SITE = {
   email: 'blondele.teikeu@metacares.be',
   phone: '+32 485 52 34 10',
   whatsapp: '32485523410', // même numéro, format international sans « + » ni espaces
-  city: 'Liège, Belgique',
-  // Identité légale (obligatoire sur le site et dans les CGV) : à compléter.
-  legalName: '[Nom de l’entreprise ou de l’indépendant]',
-  address: '[Rue et numéro], [code postal] Liège, Belgique',
-  bce: '[BE 0XXX.XXX.XXX]',
+  city: 'Charleroi, Belgique',
+  // Identité légale (affichée sur le site et dans les CGV).
+  legalName: 'Metacares',
+  address: 'Av. des Alliés 41/3, 6000 Charleroi, Belgique',
+  bce: '0800.804.284',
   // Identifiant Amazon Partenaires (ex. « techmalin-21 ») : ajouté automatiquement à tous les liens Amazon.
   amazonTag: 'techmalin09-21',
 }

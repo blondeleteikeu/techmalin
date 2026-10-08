@@ -47,7 +47,7 @@ Kit de contact fournisseurs (non publié) : `interne/CONTACTS-FOURNISSEURS.md`.
 
 ## Avant la mise en ligne (check-list légale BE)
 
-- [ ] N° BCE, TVA, adresse, e-mail dans `config.ts` / pied de page
+- [x] Identité légale (Metacares, BCE 0800.804.284, Charleroi) dans `config.ts`
 - [ ] Remplacer les prix indicatifs par les prix réels
 - [ ] CGV + formulaire de rétractation (14 jours) si vous vendez « sur demande », alignés sur les conditions de retour du fournisseur
 - [ ] Politique de confidentialité (RGPD) : les données du formulaire peuvent être transmises au fournisseur

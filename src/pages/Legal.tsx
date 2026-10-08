@@ -8,7 +8,7 @@ const Id = () => (
   <p className="legal-id">
     <strong>{SITE.legalName}</strong>, exploitant le site « {SITE.name} »<br />
     Adresse : {SITE.address}<br />
-    N° d’entreprise (BCE) / TVA : {SITE.bce}<br />
+    N° d’entreprise (BCE) : {SITE.bce}<br />
     E-mail : <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · Téléphone / WhatsApp : {SITE.phone}
   </p>
 )
@@ -67,7 +67,7 @@ export function CGV() {
       <p>Le traitement de vos données est décrit dans notre <a href="#/confidentialite">politique de confidentialité</a>.</p>
 
       <h2>Article 12 – Droit applicable et litiges</h2>
-      <p>Les présentes conditions sont soumises au droit belge. En cas de litige, et à défaut d’accord amiable, les tribunaux de l’arrondissement judiciaire de Liège sont compétents, sans préjudice du droit du consommateur de saisir le tribunal de son domicile ni des dispositions impératives qui le protègent.</p>
+      <p>Les présentes conditions sont soumises au droit belge. En cas de litige, et à défaut d’accord amiable, les tribunaux de l’arrondissement judiciaire du Hainaut (division de Charleroi) sont compétents, sans préjudice du droit du consommateur de saisir le tribunal de son domicile ni des dispositions impératives qui le protègent.</p>
     </article>
   )
 }
