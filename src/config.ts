@@ -11,6 +11,7 @@ export const SITE = {
   legalName: 'Metacares',
   address: 'Av. des Alliés 41/3, 6000 Charleroi, Belgique',
   bce: '0800.804.284',
+  vat: 'BE 0800.804.284',
   // Identifiant Amazon Partenaires (ex. « techmalin-21 ») : ajouté automatiquement à tous les liens Amazon.
   amazonTag: 'techmalin09-21',
 }

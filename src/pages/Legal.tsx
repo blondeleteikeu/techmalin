@@ -8,7 +8,7 @@ const Id = () => (
   <p className="legal-id">
     <strong>{SITE.legalName}</strong>, exploitant le site « {SITE.name} »<br />
     Adresse : {SITE.address}<br />
-    N° d’entreprise (BCE) : {SITE.bce}<br />
+    N° d’entreprise (BCE) : {SITE.bce} · TVA : {SITE.vat}<br />
     E-mail : <a href={`mailto:${SITE.email}`}>{SITE.email}</a> · Téléphone / WhatsApp : {SITE.phone}
   </p>
 )
@@ -79,7 +79,7 @@ export function Retractation() {
       <p className="legal-date">Annexe 2 au livre VI du Code de droit économique</p>
       <p>Veuillez compléter et renvoyer le présent formulaire <strong>uniquement si vous souhaitez vous rétracter</strong> d’une commande « Sur demande » passée auprès de {SITE.name}. Pour un achat effectué chez un marchand partenaire (Amazon, Coolblue, Back Market, Meta Cares…), adressez-vous directement à ce marchand.</p>
       <div className="legal-form">
-        <p>À l’attention de :<br /><strong>{SITE.legalName}</strong> ({SITE.name})<br />{SITE.address}<br />E-mail : {SITE.email}</p>
+        <p>À l’attention de :<br /><strong>{SITE.legalName}</strong> ({SITE.name})<br />{SITE.address}<br />TVA : {SITE.vat}<br />E-mail : {SITE.email}</p>
         <p>Je/Nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la vente du bien (*) / pour la prestation de services (*) ci-dessous :</p>
         <p className="line">Désignation du produit : </p>
         <p className="line">Commandé le (*) / reçu le (*) : </p>

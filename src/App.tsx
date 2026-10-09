@@ -69,7 +69,7 @@ export default function App() {
         <div className="wrap foot-in">
           <div><a href="#top" className="logo light"><span className="logo-mark"><Icon name="laptop" size={20} /></span>{SITE.name}</a><p>{SITE.tagline}</p></div>
           <div><h4>Contact</h4><p>{SITE.city}<br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a><br /><a href={wa()} target="_blank" rel="noopener">{SITE.phone}</a> (tél. & WhatsApp)</p></div>
-          <div><h4>Informations légales</h4><p><a href="#/cgv">Conditions générales de vente</a><br /><a href="#/retractation">Formulaire de rétractation</a><br /><a href="#/confidentialite">Politique de confidentialité</a><br />BCE : {SITE.bce}</p></div>
+          <div><h4>Informations légales</h4><p><a href="#/cgv">Conditions générales de vente</a><br /><a href="#/retractation">Formulaire de rétractation</a><br /><a href="#/confidentialite">Politique de confidentialité</a><br />BCE : {SITE.bce} · TVA : {SITE.vat}</p></div>
         </div>
         <p className="copy">© {new Date().getFullYear()} {SITE.name} · Prix TTC relevés le {PRICE_DATE}. En tant que partenaire Amazon, {SITE.name} réalise un bénéfice sur les achats remplissant les conditions requises. Les liens marchands sont des liens d’affiliation, sans surcoût pour vous.</p>
       </footer>
