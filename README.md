@@ -20,8 +20,8 @@ npm run build    # site statique dans dist/ (GitHub Pages, Netlify, Vercel…)
 
 ## Catalogue réel
 
-`src/data/catalog.ts` contient 27 vrais produits (photos marchand + prix TTC relevés sur Amazon.com.be
-le 6 octobre 2026, comparés à Coolblue qui était plus cher sur tous les articles testés).
+`src/data/catalog.ts` contient 73 vrais produits (photos marchand + prix TTC relevés sur Amazon.com.be, dernier relevé le 13 octobre 2026 ;
+1er relevé le 6 octobre 2026, comparé à Coolblue qui était plus cher sur tous les articles testés).
 Mettez à jour `PRICE_DATE` et les prix à chaque relevé. Pages légales : `src/pages/Legal.tsx`
 (CGV, formulaire de rétractation, confidentialité — à faire relire et compléter via `config.ts`).
 Kit de contact fournisseurs (non publié) : `interne/CONTACTS-FOURNISSEURS.md`.

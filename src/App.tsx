@@ -111,7 +111,7 @@ function Home() {
     requestAnimationFrame(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }))
   }
   const pickCat = (c: CategoryId) => { setCat(c); document.getElementById('catalogue')?.scrollIntoView({ behavior: 'smooth' }) }
-  const heroPics = ['thinkpad-t14-g1', 'acer-ek241yg', 'sandisk-flair-64', 'mercusys-mr1500x', 'logitech-m185'].map(id => PRODUCTS.find(p => p.id === id)!)
+  const heroPics = ['hp-elitebook-840-g7', 'acer-ek241yg', 'sandisk-flair-64', 'mercusys-mr1500x', 'logitech-m185'].map(id => PRODUCTS.find(p => p.id === id)!)
   const cheapest = Math.min(...PRODUCTS.map(p => p.price))
   const mc = useMetaCares()
   const mcPicks = useMemo(() => {
