@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/techmalin/', // publié sur https://blondeleteikeu.github.io/techmalin/
+  base: '/', // publié sur https://techmalin.metacares.be/
   plugins: [react()],
 })
